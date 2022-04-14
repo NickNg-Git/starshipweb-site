@@ -1,132 +1,77 @@
-baseURL = "http://www.starshipweb.xyz"
+
+# DO NOT REMOVE THIS
+theme = "hugo-theme-codex" 
+
+# Override these settings with your own
 title = "starshipweb"
-theme = "hugo-coder"
-languageCode = "en"
-defaultContentLanguage = "en"
-paginate = 20
-pygmentsStyle = "bw"
-pygmentsCodeFences = true
-pygmentsCodeFencesGuessSyntax = true
-enableEmoji = true
-# Enable Disqus comments
-# disqusShortname = "yourdiscussshortname"
+languageCode = "en-us"
+baseURL = "https://starshipweb.xyz/"
+copyright = "© {year}"
 
+# Add your Disqus shortname here.
+# disqusShortname = "testing"
+
+# Add your Google Analytics identifier: UA-XXXXXXXX-X
+# googleAnalytics = "" 
+
+# Optional params
 [params]
-author = "starshipweb"
-description = "starshipweb Dev Blog"
-keywords = "blog,developer,personal"
-info = ["WAGMI", "" , ""]
-avatarURL = "images/TFF.png"
-#gravatar = "john.doe@example.com"
-dateFormat = "January 2, 2006"
-since = 2019
-# Git Commit in Footer, uncomment the line below to enable it
-commit = "https://github.com/luizdepra/hugo-coder/tree/"
-# Right To Left, shift content direction for languagues such as Arabic
-rtl = false
-# Specify light/dark colorscheme
-# Supported values:
-# "auto" (use preference set by browser)
-# "dark" (dark background, light foreground)
-# "light" (light background, dark foreground) (default)
-colorScheme = "auto"
-# Hide the toggle button, along with the associated vertical divider
-hideColorSchemeToggle = false
-# Series see also post count
-maxSeeAlsoItems = 5
-# Custom CSS
-customCSS = []
-# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
-customSCSS = []
-# Custom JS
-customJS = []
+  # Follow the Hugo date/time format reference here: 
+  # https://gohugo.io/functions/format/#gos-layout-string
+  dateFormat = "Jan 2 2006"
 
-# If you want to use fathom(https://usefathom.com) for analytics, add this section
-# [params.fathomAnalytics]
-# siteID = "ABCDE"
-# serverURL = "analytics.example.com" # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+  # Links to your social accounts, comment/uncomment as needed. Icons will be displayed for those specified.
+  twitter = "https://twitter.com/0x_starshipweb"
+  # github = "https://github.com/<your handle>"
+  email = "mailto:0xstarshipweb@gmail.com"
+  # mastodon = "https://mastodon.social/@nickname"
+  # facebook = "https://facebook.com/<your handle>"
+  # gitlab = "https://gitlab.com/<your handle>"
+  # instagram = "https://instagram.com/<your handle>"
+  # linkedin = "<link to your profile>"
+  # youtube = "https://www.youtube.com/channel/<your channel>"
+  
+  # Titles for your icons (shown as tooltips), and also their display order.
+  # Currently, these icons are supported: 
+  #   "Twitter", "GitHub", "Email", "Mastodon", "Facebook", "GitLab", "Instagram", "LinkedIn", "YouTube"
+  iconOrder = ["Twitter", "GitHub"]
 
-# If you want to use plausible(https://plausible.io) for analytics, add this section
-# [params.plausibleAnalytics]
-# domain = "example.com"
-# serverURL = "analytics.example.com" # Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
+  # Metadata for Twitter cards, defaults to params.twitter
+  # twitterSite = "@<your handle>"
+  # twitterAuthor = "@<your handle>"
 
-# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
-# [params.goatCounter]
-# code = "code"
+  # Set to true to display page title in table of contents in blog posts.
+  showPageTitleInTOC = true
 
-# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
-# [params.cloudflare]
-# token = "token"
+# This disables Hugo's default syntax highlighting in favor
+# of prismjs. If you wish to use Hugo's default syntax highlighting
+# over prismjs, remove this. You will also need to remove the prismjs
+# vendor script in layouts/blog/single.html.
+[markup]
+  [markup.highlight]
+    codeFences = false
+    
+  # Set to false to disallow raw HTML in markdown files
+  [markup.goldmark.renderer]
+      unsafe = true
 
-# If you want to use Matomo(https://matomo.org) for analytics, add this section
-# [params.matomo]
-# siteID = "ABCDE" # Default value is "1", overwrite this if you are cloud-hosting
-# serverURL = "analytics.example.com" # For cloud-hosting, use provided URL, e.g. example.matomo.cloud
+# Controls the navigation
+[[menu.main]]
+  identifier = "about"
+  name = "about"
+  title = "About"
+  url = "/"
 
-# If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
-# [params.googleTagManager]
-# id = "gid"
-
-# If you want to implement a Content-Security-Policy, add this section
-[params.csp]
-childsrc = ["'self'"]
-fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
-formaction = ["'self'"]
-framesrc = ["'self'"]
-imgsrc = ["'self'"]
-objectsrc = ["'none'"]
-stylesrc = [
-  "'self'",
-  "'unsafe-inline'",
-  "https://fonts.googleapis.com/",
-  "https://cdn.jsdelivr.net/"
-]
-scriptsrc = [
-  "'self'", 
-  "'unsafe-inline'", 
-  "https://www.google-analytics.com",
-  "https://cdn.jsdelivr.net/"
-]
-prefetchsrc = ["'self'"]
-# connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
-connectsrc = ["'self'", "https://www.google-analytics.com"]
-
-[taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
-author = "authors"
-
-[[params.social]]
-name = "Github"
-icon = "fa fa-2x fa-github"
-weight = 1
-url = "https://github.com/starshipweb/"
+[[menu.main]]
+  identifier = "blog"
+  name = "blog"
+  title = "Blog"
+  url = "/blog"
+  
+[[menu.main]]
+  identifier = "projects"
+  name = "projects"
+  title = "Projects"
+  url = "/projects"
 
 
-[[params.social]]
-name = "Twitter"
-icon = "fa fa-2x fa-twitter"
-weight = 3
-url = "https://twitter.com/0x_starshipweb/"
-
-
-
-[languages.en]
-languageName = ":uk:"
-
-[[languages.en.menu.main]]
-name = "About"
-weight = 1
-url = "about/"
-
-[[languages.en.menu.main]]
-name = "Blog"
-weight = 2
-url = "posts/"
-
-[[languages.en.menu.main]]
-name = "Projects"
-weight = 3
-url = "projects/"
