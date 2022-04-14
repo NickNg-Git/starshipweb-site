@@ -1,3 +1,6 @@
 [submodule "blog/themes/hugo-coder"]
 	path = blog/themes/hugo-coder
 	url = https://github.com/luizdepra/hugo-coder.git
+[submodule "blog/themes/hugo-theme-codex"]
+	path = blog/themes/hugo-theme-codex
+	url = https://github.com/jakewies/hugo-theme-codex.git
