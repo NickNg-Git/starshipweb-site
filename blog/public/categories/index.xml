@@ -2,9 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on starshipweb</title>
-    <link>http://www.starshipweb.xyz/categories/</link>
+    <link>https://starshipweb.xyz/categories/</link>
     <description>Recent content in Categories on starshipweb</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://www.starshipweb.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <copyright>© {year}</copyright><atom:link href="https://starshipweb.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
